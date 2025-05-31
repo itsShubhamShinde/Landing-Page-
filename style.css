@@ -1,0 +1,78 @@
+  body {
+      padding-top: 70px;
+      /* Adjust if navbar height changes */
+  }
+
+  /* Navbar hover underline animation */
+  .navbar-nav .nav-link {
+      position: relative;
+      color: #000;
+      /* default color */
+      font-weight: 500;
+      overflow: hidden;
+      transition: color 0.3s ease;
+  }
+
+  /* Underline pseudo element */
+  .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: orange;
+      transition: width 0.3s ease;
+  }
+
+  /* On hover, animate underline from left to right */
+  .navbar-nav .nav-link:hover::after {
+      width: 100%;
+  }
+
+  /* On mouse leave, underline retracts automatically due to transition */
+
+  /* Active link with persistent underline */
+  .navbar-nav .nav-link.text-warning::after {
+      width: 100%;
+  }
+
+  /* Change color on hover */
+  .navbar-nav .nav-link:hover {
+      color: orange;
+  }
+
+  .transition-colors {
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+
+  /* On hover, fill the warning button */
+  .btn-outline-warning:hover,
+  .btn-outline-warning:focus {
+      background-color: #ffc107 !important;
+      /* warning fill */
+      color: #212529 !important;
+      /* dark text */
+      border-color: #ffc107 !important;
+      /* border matches */
+  }
+
+  .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar-nav .nav-link.active {
+      color: #ffc107 !important;
+      /* Bootstrap warning color */
+      font-weight: 600;
+      border-bottom: 2px solid #ffc107;
+      /* optional underline to highlight */
+  }
+
+  .hover-success:hover {
+      background-color: #198754 !important;
+      /* Bootstrap success color */
+      color: #fff !important;
+      border-color: #198754 !important;
+  }
